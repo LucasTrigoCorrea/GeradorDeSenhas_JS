@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: #fafafa;
+  --primary-color-darker: #4c4c4c;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+}
+
+.container {
+  width: 60%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 10px 3px #1a1a1a20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-size: 2.5rem;
+  color: var(--primary-color-darker);
+}
+
+h2{
+  font-size: 1.8rem;
+  color: var(--primary-color-darker);
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+p{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: var(--primary-color-darker);
+  margin: 5px 0;
+  padding: 0;
+  width: 30%;
+}
+
+
+input[type="number"]{
+  width: 40px;
+  height: 25px;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  accent-color: var(--primary-color-darker);
+  cursor: pointer;
+  border-radius: 10px;
+  border: none!important;
+}
+
+.senha-gerada {
+  font-size: 1.5rem;
+  color: var(--primary-color-darker);
+  margin: 20px 0;
+}
+
+
+
+
+button {
+  margin: 40px 0;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0px 0px 3px 1px #1a1a1a40;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  color: var(--primary-color-darker);
+}
+
+button:hover{
+  box-shadow: 0px 0px 5px 1px #1a1a1a60;
+}
+
+@media screen and (max-width: 699px) {
+  .container{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+  h2{
+    font-size: 1.5rem;
+  }
+
+  p{
+    width: 70%;
+    font-size: 1.2rem;
+  }
+}
