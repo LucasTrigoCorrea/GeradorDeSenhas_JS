@@ -5,25 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Gerador de Senhas</title>
+  <title>Password generator</title>
 </head>
 
 <body>
 
   <section class="container">
-    <h1>Gerador de senhas</h1>
-
+    <h1>Password generator</h1>
+    
+    
     <div class="senha-gerada">
-      <h2>Selecione as opções para gerar uma nova senha</h2>
+      <h2>password</h2>
     </div>
+    
+    <h4>Select the options to generate a new password</h4>
 
-
-    <p>Quantidade de Caracteres:  <input value="8" type="number" min="1" max="20" class="qtd-caracteres"></p>
-    <p>Adicionar Maiúsculas: <input type="checkbox" class="chk-maiusculas"></p>
-    <p>Adicionar Minúsculas: <input type="checkbox" class="chk-minusculas"></p>
-    <p>Adicionar Números: <input type="checkbox" class="chk-numeros"></p>
-    <p>Adicionar Símbolos: <input type="checkbox" class="chk-simbolos"></p>
-    <button class="gerar-senha">Gerar Nova Senha</button>
+    <p>Number of Characters:  <input value="8" id="range" type="range" min="4" max="20" class="qtd-caracteres" 
+      oninput="display.value=value" onchange="display.value=value"></p>
+    <p><input type="text" id="display" value="8"
+        oninput="range.value=value" onchange="range.value=value" class="input-range"></p>
+    <p>Add uppercase letters: <input type="checkbox" class="chk-maiusculas"></p>
+    <p>Add lowercase letters: <input type="checkbox" class="chk-minusculas"></p>
+    <p>Add Numbers: <input type="checkbox" class="chk-numeros"></p>
+    <p>Add special characters: <input type="checkbox" class="chk-simbolos"></p>
+    <button class="gerar-senha">Generate</button>
 
   </section>
 

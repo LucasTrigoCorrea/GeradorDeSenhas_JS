@@ -22,7 +22,7 @@ function gera() {
     chkNumeros.checked,
     chkSimbolos.checked
   );
-    return senha || 'Selecionar quantidade e no minimo uma opçāo!';
+    return senha || 'Select quantity and at least one option!';
 
   }
 

@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
 :root {
-  --primary-color: #fafafa;
-  --primary-color-darker: #4c4c4c;
+  --primary-color: #1f1f2a;
+  --secundary-color: #0f0f25;
+  --primary-color-darker: #fff;
+  --color-purple: #8257E6;
+  --color-pink: #A40EE4;
 }
 
 * {
@@ -14,17 +20,15 @@ body {
   max-width: 100vw;
   max-height: 100vh;
   padding: 0;
-  background: var(--primary-color);
-  font-family: 'Open sans', sans-serif;
+  background: radial-gradient(var(--primary-color), var(--secundary-color));
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
   width: 60%;
   margin: 20px auto;
-  background: #fff;
   padding: 10px;
   border-radius: 6px;
-  box-shadow: 1px 1px 10px 3px #1a1a1a20;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,11 +41,23 @@ h1{
 }
 
 h2{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--primary-color-darker);
   margin: 0;
   padding: 0;
   font-weight: 400;
+  display: flex;
+  text-align: center;
+}
+h4{
+  font-size: 1.2rem;
+  color: var(--primary-color-darker);
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  display: flex;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 p{
@@ -60,6 +76,13 @@ input[type="number"]{
   height: 25px;
 }
 
+input[type="range"]{
+  cursor: pointer;
+  color: var(--primary-color-darker);
+  background-color: var(--primary-color-darker);
+  accent-color: var(--color-purple);
+}
+
 input[type="checkbox"] {
   width: 25px;
   height: 25px;
@@ -67,12 +90,29 @@ input[type="checkbox"] {
   cursor: pointer;
   border-radius: 10px;
   border: none!important;
+  accent-color: var(--color-purple);
+}
+
+.input-range{
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color-darker);
+  background-color: transparent;
 }
 
 .senha-gerada {
   font-size: 1.5rem;
   color: var(--primary-color-darker);
-  margin: 20px 0;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 20px 1px var(--primary-color-darker);
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 
@@ -85,13 +125,14 @@ button {
   box-shadow: 0px 0px 3px 1px #1a1a1a40;
   cursor: pointer;
   padding: 10px 15px;
-  background-color: var(--primary-color);
-  border-radius: 3px;
-  color: var(--primary-color-darker);
+  background-color: var(--primary-color-darker);
+  border-radius: 5px;
+  color: var(--secundary-color);
+  letter-spacing: 1px;
 }
 
 button:hover{
-  box-shadow: 0px 0px 5px 1px #1a1a1a60;
+  box-shadow: 1px 1px 20px 2px var(--primary-color-darker);
 }
 
 @media screen and (max-width: 699px) {
@@ -111,7 +152,7 @@ button:hover{
   }
 
   p{
-    width: 70%;
+    width: 90%;
     font-size: 1.2rem;
   }
 }
